@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Website Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛡️ Phishing Website Detection</h1>
+
+    <form method="post">
+        <input type="text" name="url" placeholder="Enter website URL" required>
+        <button type="submit">Check Website</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            {{ result }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
